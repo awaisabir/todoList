@@ -16,10 +16,12 @@
         <h1>Basic toDo List ({{todos.length}})</h1>
       </div>
 
-      <div class="checkbox" ng-repeat="todo in todos">
-        <label>
-          <input type="checkbox" ng-click="deleteAToDo(todo._id)"> {{todo.text}}
-        </label>
+      <div class="col-lg-15">
+        <div class="checkbox" ng-repeat="todo in todos">
+          <label>
+            <input type="checkbox" ng-click="deleteAToDo(todo._id)"> {{todo.text}}
+          </label>
+        </div>
       </div>
 
       <form class="form-horizontal">
@@ -29,12 +31,12 @@
           </legend>
 
           <div class="form-group">
-            <div class="col-lg-10">
-              <input type="text" class="form-control text-center" placeholder="Add a to-do" ng-model="list.text" />
+            <div class="col-lg-12">
+              <input type="text" size="50" class="form-control text-center" placeholder="Add a to-do" ng-model="list.text" />
             </div>
           </div>
 
-            <div class="col-lg-10 col-lg-offset-2">
+            <div class="col-lg-12">
               <button type="submit" class="btn btn-primary" ng-click="createAToDo()">Add</button>
             </div>
         </fieldset>
